@@ -23,11 +23,16 @@ After changing the Formspree form settings, rebuild and upload the contents of `
 
 ## SPA fallback
 
-Because the site uses client-side routes, configure Hostinger to serve `index.html` for unknown application paths. If Apache is used, add this `.htaccess` file alongside `index.html`:
+Because the site uses client-side routes, configure Hostinger to serve `index.html` for unknown application paths. The build includes `public/.htaccess`, which should be uploaded alongside `index.html` when Apache rewrite support is enabled. It redirects HTTP, `www`, and other host variants to the canonical HTTPS domain and serves `index.html` for unknown application paths.
+
+If the file is not included in your upload, add this `.htaccess` file alongside `index.html`:
 
 ```apache
 RewriteEngine On
 RewriteBase /
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^statecollegestudentlaundry\.com$ [NC]
+RewriteRule ^ https://statecollegestudentlaundry.com%{REQUEST_URI} [R=301,L,NE]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.html [L]

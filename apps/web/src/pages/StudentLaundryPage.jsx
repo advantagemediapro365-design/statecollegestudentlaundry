@@ -29,7 +29,7 @@ function StudentLaundryPage() {
             <PageHero
                 eyebrow="Student laundry"
                 title="A Laundry Service Designed Around State College Students"
-                description="Fresh Fold Altoona serves Penn State students and other State College area students with convenient laundry pickup, wash, dry & fold, and delivery — so laundry never gets in the way of the semester."
+                description="State College Student Laundry serves Penn State students and other State College area students with convenient laundry pickup, wash, dry & fold, and delivery — so laundry never gets in the way of the semester."
             />
 
             <section className="px-4 py-16 sm:px-6 sm:py-20">
@@ -157,7 +157,7 @@ function StudentLaundryPage() {
                             College or surrounding service area and that pickup arrangements work for your building.
                         </p>
                         <p className="mt-6 rounded-2xl border border-border bg-secondary/60 p-5 text-sm leading-relaxed text-muted-foreground">
-                            Fresh Fold Altoona is an independent local laundry service serving Penn State students. We
+                            State College Student Laundry is an independent local laundry service serving Penn State students. We
                             are not affiliated with, endorsed by, or sponsored by Penn State University.
                         </p>
                         <Link

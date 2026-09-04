@@ -17,12 +17,12 @@ function HomePage() {
                 <title>Student Laundry Pickup & Delivery in State College | StateCollegeStudentLaundry.com</title>
                 <meta
                     name="description"
-                    content="Fresh Fold Altoona provides student laundry pickup, wash, dry & fold, and delivery in the State College area — serving Penn State students in dorms and off-campus apartments. Schedule a pickup today."
+                    content="State College Student Laundry provides student laundry pickup, wash, dry & fold, and delivery in the State College area — serving Penn State students in dorms and off-campus apartments. Schedule a pickup today."
                 />
             </Helmet>
             <Seo
                 title="Student Laundry Pickup & Delivery in State College"
-                description="Convenient laundry pickup, wash, dry & fold, and delivery for students in the State College area, operated by Fresh Fold Altoona."
+                description="Convenient laundry pickup, wash, dry & fold, and delivery for students in the State College area from State College Student Laundry."
                 image={IMAGES.hero}
                 siteName="StateCollegeStudentLaundry.com"
             />
@@ -40,8 +40,8 @@ function HomePage() {
                             <span className="text-primary">State College</span>
                         </h1>
                         <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Spend less time doing laundry and more time focusing on school, work and life. Fresh Fold
-                            Altoona provides convenient laundry pickup, wash, dry, fold and delivery services for
+                            Spend less time doing laundry and more time focusing on school, work and life. State College
+                            Student Laundry provides convenient laundry pickup, wash, dry, fold and delivery services for
                             students in the State College area.
                         </p>
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -237,7 +237,7 @@ function HomePage() {
                 </div>
             </section>
 
-            {/* How Fresh Fold Compares */}
+            {/* How State College Student Laundry Compares */}
             <section className="px-4 py-16 sm:px-6 sm:py-24">
                 <div className="mx-auto max-w-6xl">
                     <Reveal className="mx-auto max-w-2xl text-center">
@@ -274,7 +274,7 @@ function HomePage() {
                             Laundry Made Easier for Students in State College
                         </h2>
                         <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                            Fresh Fold Altoona is a student laundry service in State College designed to take laundry
+                            State College Student Laundry is a student laundry service designed to take laundry
                             off your plate — whether you live in a dorm or an off-campus apartment. We are an
                             independent local service, not affiliated with the university, and we focus on making
                             laundry one less thing to worry about during the semester.

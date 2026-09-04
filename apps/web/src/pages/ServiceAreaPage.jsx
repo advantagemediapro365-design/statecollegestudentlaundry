@@ -15,7 +15,7 @@ function ServiceAreaPage() {
                 <title>Service Area & Eligibility | Student Laundry Pickup in State College</title>
                 <meta
                     name="description"
-                    content="Fresh Fold Altoona serves students in eligible State College and surrounding service areas. Learn how pickup arrangements and eligibility are confirmed for your dorm or apartment."
+                    content="State College Student Laundry serves students in eligible State College and surrounding service areas. Learn how pickup arrangements and eligibility are confirmed for your dorm or apartment."
                 />
             </Helmet>
             <Seo
@@ -41,7 +41,7 @@ function ServiceAreaPage() {
                             Where We Serve
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                            Fresh Fold Altoona provides student laundry pickup and delivery for eligible State College
+                            State College Student Laundry provides student laundry pickup and delivery for eligible State College
                             and surrounding service areas — including dorms where pickup arrangements are supported,
                             off-campus apartments, and student housing.
                         </p>

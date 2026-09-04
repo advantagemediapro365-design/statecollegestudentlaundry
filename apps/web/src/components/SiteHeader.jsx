@@ -20,12 +20,12 @@ function SiteHeader() {
     return (
         <header className="sticky top-0 z-40 border-b border-border/70 bg-white/90 backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-                <Link to="/" className="flex items-center gap-2.5" aria-label="Fresh Fold Altoona — home">
+                <Link to="/" className="flex items-center gap-2.5" aria-label="State College Student Laundry — home">
                     <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                         <WashingMachine className="h-5 w-5" strokeWidth={1.8} />
                     </span>
                     <span className="leading-tight">
-                        <span className="block font-display text-[15px] font-bold tracking-tight">Fresh Fold Altoona</span>
+                        <span className="block font-display text-[15px] font-bold tracking-tight">State College Student Laundry</span>
                         <span className="block text-[11px] font-medium text-muted-foreground">StateCollegeStudentLaundry.com</span>
                     </span>
                 </Link>

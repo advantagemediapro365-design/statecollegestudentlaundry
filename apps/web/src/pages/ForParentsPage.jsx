@@ -28,7 +28,7 @@ function ForParentsPage() {
             <PageHero
                 eyebrow="For parents"
                 title="One Less Thing for Your Student to Worry About"
-                description="College life is busy, and laundry is often the first chore to pile up. Fresh Fold Altoona helps parents keep students stocked with clean clothes through convenient pickup and delivery in the State College area."
+                description="College life is busy, and laundry is often the first chore to pile up. State College Student Laundry helps parents keep students stocked with clean clothes through convenient pickup and delivery in the State College area."
             />
 
             <section className="px-4 py-16 sm:px-6 sm:py-20">

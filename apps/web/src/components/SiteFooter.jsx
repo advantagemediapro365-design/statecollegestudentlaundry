@@ -14,14 +14,14 @@ function SiteFooter() {
                         <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                             <WashingMachine className="h-5 w-5" strokeWidth={1.8} />
                         </span>
-                        <span className="font-display text-base font-bold tracking-tight">Fresh Fold Altoona</span>
+                        <span className="font-display text-base font-bold tracking-tight">State College Student Laundry</span>
                     </div>
                     <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                        Student laundry pickup and delivery service in State College, operated by Fresh Fold Altoona —
+                        Student laundry pickup and delivery service in State College —
                         serving Penn State students and State College area students with convenient wash, dry & fold service.
                     </p>
                     <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-                        Fresh Fold Altoona is not affiliated with, endorsed by, or sponsored by Penn State University.
+                        State College Student Laundry is not affiliated with, endorsed by, or sponsored by Penn State University.
                     </p>
                     <a
                         href={`tel:${PHONE_TEL}`}
@@ -86,7 +86,7 @@ function SiteFooter() {
 
             <div className="border-t border-border">
                 <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6">
-                    <span>© {year} Fresh Fold Altoona · StateCollegeStudentLaundry.com</span>
+                    <span>© {year} State College Student Laundry · StateCollegeStudentLaundry.com</span>
                     <span>Serving students in eligible State College and surrounding service areas.</span>
                 </div>
             </div>

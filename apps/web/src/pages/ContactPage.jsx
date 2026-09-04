@@ -62,7 +62,7 @@ function ContactPage() {
                 <title>Schedule a Pickup | Contact State College Student Laundry</title>
                 <meta
                     name="description"
-                    content="Request a student laundry pickup in State College or confirm service-area eligibility. Send your details and Fresh Fold Altoona will follow up to schedule."
+                    content="Request a student laundry pickup in State College or confirm service-area eligibility. Send your details and State College Student Laundry will follow up to schedule."
                 />
             </Helmet>
             <Seo
@@ -243,7 +243,7 @@ function ContactPage() {
                                 </span>
                                 <h2 className="mt-4 font-display text-lg font-semibold">Prefer to Call or Text?</h2>
                                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                                    Reach the Fresh Fold Altoona team directly — we are happy to answer questions or
+                                    Reach the State College Student Laundry team directly — we are happy to answer questions or
                                     help you schedule a pickup.
                                 </p>
                                 <a

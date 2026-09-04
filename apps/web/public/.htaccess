@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Use one HTTPS, non-www URL so search engines do not index duplicate hosts.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^statecollegestudentlaundry\.com$ [NC]
+RewriteRule ^ https://statecollegestudentlaundry.com%{REQUEST_URI} [R=301,L,NE]
+
+# Serve the SPA entry point for client-side routes.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

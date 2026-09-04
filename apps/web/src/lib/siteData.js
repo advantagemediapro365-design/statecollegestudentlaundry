@@ -143,7 +143,7 @@ export const FAQS = [
     },
     {
         q: 'What areas do you serve?',
-        a: 'Fresh Fold Altoona serves students in eligible State College and surrounding service areas. Eligibility depends on your exact location and pickup arrangements, so the fastest way to confirm is to send a scheduling request or contact the team.',
+        a: 'State College Student Laundry serves students in eligible State College and surrounding service areas. Eligibility depends on your exact location and pickup arrangements, so the fastest way to confirm is to send a scheduling request or contact the team.',
     },
     {
         q: 'How do I contact the team?',
@@ -205,7 +205,7 @@ export const PRICING_NOTE =
 
 export const COMPETITORS = [
     {
-        name: 'Fresh Fold Altoona',
+        name: 'State College Student Laundry',
         service: 'Pickup, wash/dry/fold & delivery',
         price: '$1.65–$1.95/lb',
         pickup: true,

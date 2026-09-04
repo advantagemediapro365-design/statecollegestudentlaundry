@@ -16,7 +16,7 @@ function HowItWorksPage() {
                 <title>How It Works | Student Laundry Pickup in State College</title>
                 <meta
                     name="description"
-                    content="See how student laundry pickup and delivery works in State College: schedule, pickup, wash dry & fold, and delivery — operated by Fresh Fold Altoona."
+                    content="See how student laundry pickup and delivery works in State College: schedule, pickup, wash dry & fold, and delivery from State College Student Laundry."
                 />
             </Helmet>
             <Seo
