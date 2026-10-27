@@ -405,6 +405,70 @@ function HomePage() {
                 </div>
             </section>
 
+            <section className="px-4 py-16 sm:px-6 sm:py-20">
+                <div className="mx-auto max-w-4xl">
+                    <Reveal>
+                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                            A Practical Guide to Student Laundry Pickup
+                        </h2>
+                        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                            A full week of lectures, labs, work shifts, practices, and study time can make it difficult
+                            to find a free block for laundry. A pickup and delivery service can help by moving the
+                            washing and folding off your to-do list. Instead of planning a trip around shared machines
+                            or a laundromat, ask about an available pickup, then use the time for studying, meals, rest,
+                            or other parts of campus life. Service is available only when your location and pickup
+                            arrangements can be confirmed.
+                        </p>
+                    </Reveal>
+                    <div className="mt-8 grid gap-8 sm:grid-cols-2">
+                        <Reveal>
+                            <h3 className="font-display text-xl font-semibold">What to include in a request</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                                Include your name and preferred way to be contacted, your State College address or
+                                building, whether you live in a dorm or an apartment, and the days or times that
+                                generally fit your schedule. If your building has a designated entrance or a particular
+                                handoff procedure, mention that too. You can also ask about available plans, current
+                                pricing, laundry preparation, and return delivery. We will review the details and
+                                confirm what is available before treating a pickup as scheduled.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.06}>
+                            <h3 className="font-display text-xl font-semibold">Choosing a laundry plan</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                                Students have different laundry needs. One person may want help occasionally during
+                                exams or a busy stretch of the semester, while another may prefer to ask about a
+                                recurring schedule. Review the available options on the services and pricing page and
+                                consider how often you typically need wash, dry, and fold service. Ask about current
+                                per-pound rates, any minimums or plan conditions, payment details, and scheduling before
+                                deciding. Plan availability and terms should be confirmed directly.
+                            </p>
+                        </Reveal>
+                        <Reveal>
+                            <h3 className="font-display text-xl font-semibold">Information for parents</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                                Parents and other supporters can help a student start a conversation about availability,
+                                pricing, and pickup arrangements. The student’s residence and schedule matter, so share
+                                the correct location and involve the student in confirming where and when laundry can
+                                be collected and returned. Residence hall policies, apartment access, and individual
+                                schedules can affect the details. We can explain the available options and confirm
+                                whether a particular dorm or apartment can be served before a plan is made.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.06}>
+                            <h3 className="font-display text-xl font-semibold">Where we serve</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                                The service is focused on students in State College and nearby areas where a pickup
+                                route and handoff can be arranged. Being in the region does not automatically mean
+                                every address or building is covered. Distance, access, building procedures, and
+                                current availability can all affect eligibility. Check the service area information,
+                                then send your precise location for confirmation. The service is independent and is not
+                                affiliated with or endorsed by Penn State University.
+                            </p>
+                        </Reveal>
+                    </div>
+                </div>
+            </section>
+
             <section className="px-4 pb-8 sm:px-6" aria-labelledby="share-page-heading">
                 <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
                     <h2 id="share-page-heading" className="font-display text-sm font-semibold">
