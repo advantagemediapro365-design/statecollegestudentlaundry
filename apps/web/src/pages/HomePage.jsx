@@ -14,14 +14,14 @@ function HomePage() {
     return (
         <>
             <Helmet>
-                <title>Student Laundry Pickup & Delivery in State College | StateCollegeStudentLaundry.com</title>
+                <title>Student Laundry in State College | Pickup &amp; Delivery</title>
                 <meta
                     name="description"
                     content="State College Student Laundry provides student laundry pickup, wash, dry & fold, and delivery in the State College area — serving Penn State students in dorms and off-campus apartments. Schedule a pickup today."
                 />
             </Helmet>
             <Seo
-                title="Student Laundry Pickup & Delivery in State College"
+                title="Student Laundry in State College | Pickup & Delivery"
                 description="Convenient laundry pickup, wash, dry & fold, and delivery for students in the State College area from State College Student Laundry."
                 image={IMAGES.hero}
                 siteName="StateCollegeStudentLaundry.com"
@@ -402,6 +402,40 @@ function HomePage() {
                             See all FAQs <ArrowRight className="h-4 w-4" />
                         </Link>
                     </Reveal>
+                </div>
+            </section>
+
+            <section className="px-4 pb-8 sm:px-6" aria-labelledby="share-page-heading">
+                <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+                    <h2 id="share-page-heading" className="font-display text-sm font-semibold">
+                        Share this page
+                    </h2>
+                    <div className="flex flex-wrap gap-4 text-sm">
+                        <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstatecollegestudentlaundry.com%2F"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium text-primary underline-offset-4 hover:underline"
+                        >
+                            Facebook
+                        </a>
+                        <a
+                            href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstatecollegestudentlaundry.com%2F"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium text-primary underline-offset-4 hover:underline"
+                        >
+                            X
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fstatecollegestudentlaundry.com%2F"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium text-primary underline-offset-4 hover:underline"
+                        >
+                            LinkedIn
+                        </a>
+                    </div>
                 </div>
             </section>
 

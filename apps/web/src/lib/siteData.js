@@ -15,12 +15,13 @@ export const PHONE = '570-494-7523';
 export const PHONE_TEL = '+15704947523';
 
 export const IMAGES = {
-    hero: '/images/freshfoldaltoona_laundry_hero.png',
-    pickup: '/images/freshfoldaltoona_laundry_pickup.png',
-    dorm: '/images/freshfoldaltoona_laundry_dorm.png',
-    facility: '/images/freshfoldaltoona_laundry_facility.png',
-    parents: '/images/freshfoldaltoona_laundry_parents.png',
-    students: '/images/freshfoldaltoona_laundry_students.png',
+    logo: '/images/state_college_student_laundry_logo.png',
+    hero: '/images/state_college_student_laundry_hero.png',
+    pickup: '/images/state_college_student_laundry_pickup.png',
+    dorm: '/images/state_college_students_launadry.png',
+    facility: '/images/state_college_student_laundry_facility.png',
+    parents: '/images/state_college_student_laundry_parents.png',
+    students: '/images/state_college_student_laundry_students.png',
 };
 
 export const BENEFITS = [

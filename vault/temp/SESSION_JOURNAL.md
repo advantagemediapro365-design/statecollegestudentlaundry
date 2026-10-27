@@ -746,3 +746,128 @@
 - action: http://localhost:3000/book
 - fields: [{"label":"Name *","type":"text","value":"Ibrahim Tijani","length":14,"redacted":false},{"label":"Email *","type":"email","value":"ibrahimtijani08@gmail.com","length":25,"redacted":false},{"label":"Phone","type":"tel","value":"08141994147","length":11,"redacted":false},{"label":"Pickup Location or Area *","type":"text","value":"Abuja","length":5,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"housing","length":7,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"flexible","length":8,"redacted":false},{"label":"[button]","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"recurring","length":9,"redacted":false},{"label":"Message","type":"textarea","value":"kjjkjkkjlkljkljklj","length":18,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
 
+## 2026-10-27 18:14:38.727Z load
+- url: http://localhost:3000/
+- title: Student Laundry Pickup & Delivery in State College | State College Student Laundry
+
+## 2026-10-27 18:14:41.816Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-10-27 18:17:38.885Z load
+- url: http://localhost:3000/
+- title: Student Laundry Pickup & Delivery in State College | State College Student Laundry
+
+## 2026-10-27 18:17:58.206Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Start My Plan"}
+
+## 2026-10-27 18:17:58.213Z navigate
+- url: http://localhost:3000/book
+- via: pushState
+
+## 2026-10-27 18:19:07.635Z click
+- element: {"tag":"a","role":null,"ariaLabel":"State College Student Laundry — home","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student LaundryStateCollegeStudentLaundry.com"}
+
+## 2026-10-27 18:19:07.639Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-10-27 18:24:29.210Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Plans"}
+
+## 2026-10-27 18:24:29.261Z navigate
+- url: http://localhost:3000/student-laundry
+- via: pushState
+
+## 2026-10-27 18:24:46.793Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Parents"}
+
+## 2026-10-27 18:24:46.797Z navigate
+- url: http://localhost:3000/parents
+- via: pushState
+
+## 2026-10-27 18:24:55.021Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Penn State"}
+
+## 2026-10-27 18:24:55.024Z navigate
+- url: http://localhost:3000/penn-state
+- via: pushState
+
+## 2026-10-27 18:24:55.115Z navigate
+- url: http://localhost:3000/penn-state/university-park
+- via: replaceState
+
+## 2026-10-27 18:25:08.395Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pricing"}
+
+## 2026-10-27 18:25:08.399Z navigate
+- url: http://localhost:3000/pricing
+- via: pushState
+
+## 2026-10-27 18:30:20.078Z load
+- url: http://localhost:3000/pricing
+- title: Student Laundry Pickup & Delivery in State College | State College Student Laundry
+
+## 2026-10-27 18:30:34.390Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-10-27 18:30:34.574Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-10-27 18:30:35.077Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student LaundryStudent laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service.State College Student Laundry is not affiliated with, endorsed by, or sponsored by Penn State University.570-494-7523"}
+
+## 2026-10-27 18:32:19.083Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student LaundryStudent laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service.State College Student Laundry is not affiliated with, endorsed by, or sponsored by Penn State University.570-494-7523"}
+
+## 2026-10-27 18:33:33.878Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Plans"}
+
+## 2026-10-27 18:33:33.884Z navigate
+- url: http://localhost:3000/student-laundry
+- via: pushState
+
+## 2026-10-27 18:36:26.315Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry"}
+
+## 2026-10-27 18:36:26.507Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry"}
+
+## 2026-10-27 18:36:26.747Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student LaundryStudent laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service.State College Student Laundry is not affiliated with, endorsed by, or sponsored by Penn State University.570-494-7523ExploreHomeStudent PlansPricingPenn State University ParkCollege RoutesParentsHow It WorksService AreaFAQGet StartedReady to hand off your laundry? Send a scheduling request and we will confirm eligibility and availability for your area.Start My Plan Contact & schedulingCall or Text 570-494-7523"}
+
+## 2026-10-27 18:36:27.259Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry"}
+
+## 2026-10-27 18:36:27.468Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry"}
+
+## 2026-10-27 18:36:27.651Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry"}
+
+## 2026-10-27 18:36:27.821Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry"}
+
+## 2026-10-27 18:36:28.254Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Student laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service."}
+
+## 2026-10-27 18:36:28.590Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Student laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service."}
+
+## 2026-10-27 18:36:28.796Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Student laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service."}
+
+## 2026-10-27 18:36:28.963Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Student laundry pickup and delivery service in State College — serving Penn State students and State College area students with convenient wash, dry & fold service."}
+
+## 2026-10-27 18:36:29.539Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry is not affiliated with, endorsed by, or sponsored by Penn State University."}
+
+## 2026-10-27 18:51:35.317Z load
+- url: http://localhost:3000/student-laundry
+- title: Student Laundry in State College | Pickup & Delivery
+
+## 2026-10-27 18:54:02.877Z load
+- url: http://localhost:3000/student-laundry
+- title: Student Laundry in State College | Pickup & Delivery
+

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, Phone, WashingMachine } from 'lucide-react';
+import { Menu, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { PHONE, PHONE_TEL } from '@/lib/siteData';
+import { IMAGES, PHONE, PHONE_TEL } from '@/lib/siteData';
 
 const NAV = [
     { to: '/student-laundry', label: 'Plans' },
@@ -21,9 +21,12 @@ function SiteHeader() {
         <header className="sticky top-0 z-40 border-b border-border/70 bg-white/90 backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
                 <Link to="/" className="flex items-center gap-2.5" aria-label="State College Student Laundry — home">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                        <WashingMachine className="h-5 w-5" strokeWidth={1.8} />
-                    </span>
+                    <img
+                        src={IMAGES.logo}
+                        alt=""
+                        className="h-14 w-14 rounded-xl bg-white object-contain"
+                        aria-hidden="true"
+                    />
                     <span className="leading-tight">
                         <span className="block font-display text-[15px] font-bold tracking-tight">State College Student Laundry</span>
                         <span className="block text-[11px] font-medium text-muted-foreground">StateCollegeStudentLaundry.com</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { WashingMachine, ArrowRight, Phone } from 'lucide-react';
-import { PHONE, PHONE_TEL } from '@/lib/siteData';
+import { ArrowRight, Phone } from 'lucide-react';
+import { IMAGES, PHONE, PHONE_TEL } from '@/lib/siteData';
 
 function SiteFooter() {
     const year = new Date().getFullYear();
@@ -11,9 +11,12 @@ function SiteFooter() {
             <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
                 <div>
                     <div className="flex items-center gap-2.5">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                            <WashingMachine className="h-5 w-5" strokeWidth={1.8} />
-                        </span>
+                        <img
+                            src={IMAGES.logo}
+                            alt=""
+                            className="h-14 w-14 rounded-xl bg-white object-contain"
+                            aria-hidden="true"
+                        />
                         <span className="font-display text-base font-bold tracking-tight">State College Student Laundry</span>
                     </div>
                     <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
