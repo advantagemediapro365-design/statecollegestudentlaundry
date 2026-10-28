@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { ArrowRight, CheckCircle2, MapPin, Shirt, Truck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPin, Phone, Shirt, Truck } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import Seo from '@/components/Seo';
 import CTASection from '@/components/CTASection';
 import PricingPlans from '@/components/PricingPlans';
 import PricingComparison from '@/components/PricingComparison';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { BENEFITS, STEPS, SERVICES, FAQS, IMAGES, MARQUEE_WORDS } from '@/lib/siteData';
+import { BENEFITS, STEPS, SERVICES, FAQS, IMAGES, MARQUEE_WORDS, PHONE_TEL } from '@/lib/siteData';
 
 function HomePage() {
     return (
@@ -45,12 +45,12 @@ function HomePage() {
                             students in the State College area.
                         </p>
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                            <Link
-                                to="/contact"
+                            <a
+                                href={`tel:${PHONE_TEL}`}
                                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-[1.02] active:scale-[0.98]"
                             >
-                                Schedule a Pickup <ArrowRight className="h-4 w-4" />
-                            </Link>
+                                <Phone className="h-4 w-4" /> Call Us
+                            </a>
                             <Link
                                 to="/how-it-works"
                                 className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-white px-7 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
@@ -162,12 +162,12 @@ function HomePage() {
                         ))}
                     </div>
                     <Reveal className="mt-10 text-center">
-                        <Link
-                            to="/contact"
+                        <a
+                            href={`tel:${PHONE_TEL}`}
                             className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-[1.02] active:scale-[0.98]"
                         >
-                            Schedule Your Laundry Pickup <ArrowRight className="h-4 w-4" />
-                        </Link>
+                            <Phone className="h-4 w-4" /> Call Us
+                        </a>
                     </Reveal>
                 </div>
             </section>
@@ -503,7 +503,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <CTASection />
+            <CTASection primaryAction="call" />
         </>
     );
 }

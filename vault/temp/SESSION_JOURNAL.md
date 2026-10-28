@@ -875,3 +875,52 @@
 - url: http://localhost:3000/student-laundry
 - title: Student Laundry in State College | Pickup & Delivery
 
+## 2026-10-28 19:15:39.474Z load
+- url: http://localhost:3000/
+- title: Student Laundry in State College | Pickup & Delivery
+
+## 2026-10-28 19:16:28.554Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-10-28 19:19:00.625Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Check Your Area"}
+
+## 2026-10-28 19:19:00.633Z navigate
+- url: http://localhost:3000/service-area
+- via: pushState
+
+## 2026-10-28 19:19:13.841Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry provides student laundry pickup and delivery for eligible State College and surrounding service areas — including dorms where pickup arrangements are supported, off-campus apartments, and student housing."}
+
+## 2026-10-28 19:19:13.993Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student Laundry provides student laundry pickup and delivery for eligible State College and surrounding service areas — including dorms where pickup arrangements are supported, off-campus apartments, and student housing."}
+
+## 2026-10-28 19:19:15.003Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Where We ServeState College Student Laundry provides student laundry pickup and delivery for eligible State College and surrounding service areas — including dorms where pickup arrangements are supported, off-campus apartments, and student housing.Because eligibility depends on your exact location and building, we confirm every new customer's address before the first pickup. If you are unsure whether your area qualifies, just ask — it takes a minute."}
+
+## 2026-10-28 19:19:18.243Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirm Your Eligibility "}
+
+## 2026-10-28 19:19:18.245Z navigate
+- url: http://localhost:3000/contact
+- via: pushState
+
+## 2026-10-28 19:19:29.578Z click
+- element: {"tag":"a","role":null,"ariaLabel":"State College Student Laundry — home","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"State College Student LaundryStateCollegeStudentLaundry.com"}
+
+## 2026-10-28 19:19:29.584Z navigate
+- url: http://localhost:3000/
+- via: pushState
+
+## 2026-10-28 19:19:39.240Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Schedule a Pickup "}
+
+## 2026-10-28 19:19:39.240Z navigate
+- url: http://localhost:3000/contact
+- via: pushState
+
+## 2026-10-28 19:19:42.300Z navigate
+- url: http://localhost:3000/
+- via: popstate
+

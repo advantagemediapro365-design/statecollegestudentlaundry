@@ -7,6 +7,7 @@ import { PHONE, PHONE_TEL } from '@/lib/siteData';
 function CTASection({
     title = 'Ready to Spend Less Time Doing Laundry?',
     subtitle = 'Request a pickup and we will confirm service-area eligibility, pickup arrangements, and availability with you directly.',
+    primaryAction = 'schedule',
 }) {
     return (
         <section className="px-4 py-16 sm:px-6 sm:py-20">
@@ -27,12 +28,21 @@ function CTASection({
                         {subtitle}
                     </p>
                     <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                        <Link
-                            to="/contact"
-                            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-7 text-sm font-semibold text-primary transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto"
-                        >
-                            Schedule a Pickup <ArrowRight className="h-4 w-4" />
-                        </Link>
+                        {primaryAction === 'call' ? (
+                            <a
+                                href={`tel:${PHONE_TEL}`}
+                                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-7 text-sm font-semibold text-primary transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto"
+                            >
+                                <Phone className="h-4 w-4" /> Call Us
+                            </a>
+                        ) : (
+                            <Link
+                                to="/contact"
+                                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-7 text-sm font-semibold text-primary transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto"
+                            >
+                                Schedule a Pickup <ArrowRight className="h-4 w-4" />
+                            </Link>
+                        )}
                         <Link
                             to="/contact"
                             className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/40 px-7 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
