@@ -81,31 +81,37 @@ export const SERVICES = [
         icon: Building2,
         title: 'Dorm Laundry Pickup',
         text: 'Laundry pickup for students living in dorms, where pickup arrangements are supported. Contact us to confirm what is possible for your building.',
-        pricing: ['Standard $1.95/lb', 'Recurring $1.75/lb', 'Semester $1.65/lb'],
+        pricing: ['Weekly plans available', 'Monthly plans available', 'Call to confirm details'],
     },
     {
         icon: Home,
         title: 'Apartment Laundry Pickup',
         text: 'Pickup and delivery for off-campus apartments and student housing in eligible State College area locations.',
-        pricing: ['Standard $1.95/lb', 'Recurring $1.75/lb', 'Semester $1.65/lb'],
+        pricing: ['Weekly plans available', 'Monthly plans available', 'Call to confirm details'],
     },
     {
         icon: Shirt,
         title: 'Wash, Dry & Fold',
         text: 'Everyday laundry professionally washed, dried, and neatly folded — the core of what we do for students.',
-        pricing: ['Standard $1.95/lb', 'Recurring $1.75/lb', 'Semester $1.65/lb'],
+        pricing: ['Pickup, wash, dry & fold', 'Scheduled delivery', 'Call to confirm details'],
     },
     {
         icon: Repeat,
         title: 'Recurring Laundry Plans',
-        text: 'Ongoing weekly, bi-weekly or monthly pickup options, subject to available plans. Reach out to discuss what fits your routine.',
-        pricing: ['Weekly $1.75/lb', 'Bi-weekly $1.75/lb', 'Monthly $1.75/lb'],
+        text: 'Choose a weekly plan with 10 lb per week for $70/month, or a monthly plan with 20 lb per month for $80/month.',
+        pricing: ['Weekly plan: $70/month', 'Monthly plan: $80/month', 'Call to discuss options'],
     },
     {
         icon: CalendarRange,
-        title: 'Semester Laundry Plans',
-        text: 'Semester-length laundry arrangements, where available. Contact us for current plan options and details.',
-        pricing: ['Full semester $1.65/lb', 'Flexible scheduling within semester'],
+        title: 'One-Time Laundry Pickup',
+        text: 'One-time pickup on a scheduled route starts at $15. Call to confirm your price and schedule.',
+        pricing: ['One-time pickup from $15', 'Scheduled route service', 'Call to discuss options'],
+    },
+    {
+        icon: Shirt,
+        title: 'Blankets, Comforters & More',
+        text: 'Affordable bedding care for blankets, comforters, and other bulky items. Call with the item details for a price and pickup schedule.',
+        pricing: ['Call for your price', 'Pickup scheduling by phone'],
     },
 ];
 
@@ -132,11 +138,11 @@ export const FAQS = [
     },
     {
         q: 'How much does laundry service cost?',
-        a: 'Pricing is per pound of laundry and includes pickup, wash, dry, fold, and delivery. Standard service is $1.95/lb, recurring plans (weekly, bi-weekly, or monthly) are $1.75/lb, and a full semester commitment is $1.65/lb — our best value. The same rate applies whether you live in a dorm or an off-campus apartment.',
+        a: 'Our weekly plan includes 10 lb per week for $70/month. The monthly plan includes 20 lb per month for $80/month. One-time pickup on a scheduled route starts at $15. Call to confirm your service, price, and schedule.',
     },
     {
-        q: 'Are recurring or semester laundry plans available?',
-        a: 'Yes. Recurring plans (weekly, bi-weekly, or monthly) are $1.75/lb with pickup & delivery included, and semester-length plans are $1.65/lb for a full semester commitment with flexible scheduling within the semester. Availability depends on current plans and service-area eligibility — contact us to confirm what fits your routine.',
+        q: 'Are weekly and monthly laundry plans available?',
+        a: 'Our available plans include 10 lb per week for $70/month and 20 lb per month for $80/month. Call to discuss your needs and confirm a pickup schedule.',
     },
     {
         q: 'How long does turnaround take?',
@@ -152,100 +158,49 @@ export const FAQS = [
     },
 ];
 
-export const MARQUEE_WORDS = ['Pickup', 'Wash', 'Dry', 'Fold', 'Delivery', 'Schedule', 'Repeat'];
+export const MARQUEE_WORDS = ['Pickup', 'Wash', 'Dry', 'Fold', 'Delivery', 'Monday', 'Thursday'];
 
-// --- Pricing (Central PA Regional Laundry Market Analysis) ---
-// All prices are per pound of laundry and include pickup, wash, dry, fold, and delivery.
 export const PRICING_TIERS = [
     {
-        name: 'Standard',
-        price: '$1.95',
-        unit: '/lb',
-        tagline: 'One-time pickup & delivery',
+        name: 'Weekly Plan',
+        price: '$70',
+        unit: '/month',
+        tagline: '10 lb per week',
         featured: false,
         features: [
-            'Pickup from your dorm or apartment',
-            'Professional wash, dry & fold',
-            'Delivery back to you',
-            'No commitment — schedule as needed',
+            '10 lb of laundry each week',
+            'Scheduled pickup and delivery',
+            'Wash, dry and fold included',
         ],
-        cta: 'Schedule a Pickup',
+        cta: 'Call to Sign Up',
     },
     {
-        name: 'Recurring',
-        price: '$1.75',
-        unit: '/lb',
-        tagline: 'Weekly, bi-weekly or monthly',
+        name: 'Monthly Plan',
+        price: '$80',
+        unit: '/month',
+        tagline: '20 lb per month',
         featured: true,
         features: [
-            'Save $0.20/lb vs. standard pricing',
-            'Weekly, bi-weekly or monthly pickup',
-            'Pickup & delivery included',
-            'Laundry handled week after week',
+            '20 lb of laundry each month',
+            'Scheduled pickup and delivery',
+            'Wash, dry and fold included',
         ],
-        cta: 'Start a Recurring Plan',
+        cta: 'Call to Sign Up',
     },
     {
-        name: 'Semester',
-        price: '$1.65',
-        unit: '/lb',
-        tagline: 'Best value — full semester',
+        name: 'One-Time Pickup',
+        price: 'From $15',
+        unit: '',
+        tagline: 'Scheduled route service',
         featured: false,
         features: [
-            'Lowest per-pound rate — save $0.30/lb',
-            'Full semester commitment',
-            'Flexible scheduling within the semester',
-            'Pickup & delivery included',
+            'Book on a scheduled route',
+            'Wash, dry, fold and delivery',
+            'Call to confirm your price',
         ],
-        cta: 'Lock In Semester Pricing',
+        cta: 'Call to Sign Up',
     },
 ];
 
 export const PRICING_NOTE =
-    'All pricing is per pound of laundry and includes pickup, wash, dry, fold, and delivery. No laundromat trips — we come to your dorm or apartment.';
-
-export const COMPETITORS = [
-    {
-        name: 'State College Student Laundry',
-        service: 'Pickup, wash/dry/fold & delivery',
-        price: '$1.65–$1.95/lb',
-        pickup: true,
-        highlight: true,
-        note: 'We pick up and deliver to your dorm or apartment',
-    },
-    {
-        name: 'Balfurd Cleaners',
-        service: 'Drop-off wash/dry/fold',
-        price: '$1.85–$2.25/lb',
-        pickup: false,
-        note: 'Regional drop-off cleaner — you transport it',
-    },
-    {
-        name: 'Regional drop-off laundromats',
-        service: 'Drop-off wash/dry/fold',
-        price: '$1.25–$2.25/lb',
-        pickup: false,
-        note: 'Lower base rate, but no pickup or delivery',
-    },
-    {
-        name: 'Hamperapp (recurring)',
-        service: 'Pickup & delivery (app-based)',
-        price: '$1.85–$2.10/lb',
-        pickup: true,
-        note: 'National app service — our recurring rate beats it',
-    },
-];
-
-export const CONVENIENCE_MESSAGE =
-    'Pay slightly more than drop-off, but we pick up and deliver to your dorm or apartment — no trips to the laundromat.';
-
-export const RECURRING_PLANS = [
-    { name: 'Weekly Pickup', price: '$1.75', unit: '/lb', detail: 'Pickup & delivery included' },
-    { name: 'Bi-Weekly Pickup', price: '$1.75', unit: '/lb', detail: 'Pickup & delivery included' },
-    { name: 'Monthly Pickup', price: '$1.75', unit: '/lb', detail: 'Pickup & delivery included' },
-];
-
-export const SEMESTER_PLANS = [
-    { name: 'Full Semester Commitment', price: '$1.65', unit: '/lb', detail: 'Includes pickup & delivery' },
-    { name: 'Flexible Scheduling Within Semester', price: '$1.65', unit: '/lb', detail: 'Lowest per-pound rate' },
-];
+    'Plan prices include scheduled pickup, washing, drying, folding and delivery. Call to confirm your service and pickup schedule.';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 import Reveal from '@/components/Reveal';
-import { PRICING_TIERS, PRICING_NOTE } from '@/lib/siteData';
+import { PHONE_TEL, PRICING_TIERS, PRICING_NOTE } from '@/lib/siteData';
 import { cn } from '@/lib/utils';
 
 function PricingPlans({ showNote = true, compact = false }) {
@@ -28,10 +28,9 @@ function PricingPlans({ showNote = true, compact = false }) {
                                 >
                                     {tier.name}
                                 </h3>
-                                {tier.featured && (
+                                {tier.badge && (
                                     <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide">
-                                        <Sparkles className="h-3 w-3" />
-                                        Popular
+                                        {tier.badge}
                                     </span>
                                 )}
                             </div>
@@ -71,17 +70,17 @@ function PricingPlans({ showNote = true, compact = false }) {
                                 ))}
                             </ul>
 
-                            <Link
-                                to="/contact"
+                            <a
+                                href={`tel:${PHONE_TEL}`}
                                 className={cn(
-                                    'mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-[0.98]',
+                                    'mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-xl px-5 text-sm font-semibold transition-transform hover:scale-[1.02] active:scale-[0.98]',
                                     tier.featured
                                         ? 'bg-white text-primary'
                                         : 'border border-border bg-white text-foreground hover:bg-secondary',
                                 )}
                             >
-                                {tier.cta} <ArrowRight className="h-4 w-4" />
-                            </Link>
+                                <Phone className="h-4 w-4" /> {tier.cta}
+                            </a>
                         </div>
                     </Reveal>
                 ))}

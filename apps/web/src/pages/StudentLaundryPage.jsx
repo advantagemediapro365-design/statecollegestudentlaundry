@@ -56,7 +56,7 @@ function StudentLaundryPage() {
                             whether pickup can be arranged for your building.
                         </p>
                         <div className="mt-6 flex flex-wrap gap-2">
-                            {['Standard $1.95/lb', 'Recurring $1.75/lb', 'Semester $1.65/lb'].map((p) => (
+                            {['Weekly: 10 lb for $70/month', 'Monthly: 20 lb for $80/month', 'One-time pickup from $15'].map((p) => (
                                 <span
                                     key={p}
                                     className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-3 py-1.5 text-xs font-semibold text-foreground"
@@ -78,11 +78,11 @@ function StudentLaundryPage() {
                             Student pricing
                         </span>
                         <h2 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Per-Pound Pricing for Dorm &amp; Apartment Students
+                            Laundry Plans for Students
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            The same rate whether you live in a dorm or off-campus — and every plan includes pickup,
-                            wash, dry, fold, and delivery.
+                            Choose a weekly plan, monthly plan, or one-time pickup on a scheduled route. Call to confirm
+                            your pickup details.
                         </p>
                     </Reveal>
                     <div className="mt-12">
@@ -130,18 +130,18 @@ function StudentLaundryPage() {
                 <div className="mx-auto max-w-3xl">
                     <Reveal>
                         <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
-                            Recurring &amp; Semester Options
+                            Weekly &amp; Monthly Plans
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                            Want laundry handled all semester long? Recurring laundry options and semester-length plans
-                            may be available, subject to current plans and service-area eligibility. Recurring plans
-                            (weekly, bi-weekly, or monthly) are $1.75/lb with pickup &amp; delivery included, and a full
-                            semester commitment drops your rate to $1.65/lb — our best value.
+                            Choose 10 lb per week for $70/month or 20 lb per month for $80/month. One-time scheduled
+                            route pickup starts at $15. Call to confirm the service and pickup schedule that works for
+                            your location.
                         </p>
                         <div className="mt-6 grid gap-3 sm:grid-cols-2">
                             {[
-                                { label: 'Recurring (weekly / bi-weekly / monthly)', price: '$1.75/lb' },
-                                { label: 'Full semester commitment', price: '$1.65/lb' },
+                                { label: 'Weekly plan · 10 lb per week', price: '$70/month' },
+                                { label: 'Monthly plan · 20 lb per month', price: '$80/month' },
+                                { label: 'One-time scheduled pickup', price: 'From $15' },
                             ].map((row) => (
                                 <div
                                     key={row.label}

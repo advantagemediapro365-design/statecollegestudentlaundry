@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { IMAGES, PHONE, PHONE_TEL } from '@/lib/siteData';
 
 function SiteFooter() {
@@ -65,12 +65,12 @@ function SiteFooter() {
                         Ready to hand off your laundry? Send a scheduling request and we will confirm eligibility and
                         availability for your area.
                     </p>
-                    <Link
-                        to="/contact"
+                    <a
+                        href={`tel:${PHONE_TEL}`}
                         className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.02] active:scale-[0.98]"
                     >
-                        Start My Plan <ArrowRight className="h-4 w-4" />
-                    </Link>
+                        Call to Sign Up <Phone className="h-4 w-4" />
+                    </a>
                     <p className="mt-4 text-sm">
                         <Link to="/contact" className="font-medium text-primary underline-offset-4 hover:underline">
                             Contact & scheduling

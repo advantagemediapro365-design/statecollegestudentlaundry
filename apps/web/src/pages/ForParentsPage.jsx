@@ -54,7 +54,7 @@ function ForParentsPage() {
                             {[
                                 'Send a scheduling request on your student\u2019s behalf, or have them reach out directly',
                                 'Share their State College pickup location or area so we can confirm eligibility',
-                                'Ask about recurring or semester-length options for ongoing peace of mind',
+                                'Call to set up a weekly or monthly plan for your student',
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-3 text-sm leading-relaxed sm:text-base">
                                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -96,6 +96,7 @@ function ForParentsPage() {
             <CTASection
                 title="Set Your Student Up With Laundry Pickup"
                 subtitle="Send a scheduling request with your student's State College location and we will confirm eligibility and the options that fit their routine."
+                primaryAction="call"
             />
         </>
     );

@@ -1,509 +1,245 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { ArrowRight, CheckCircle2, MapPin, Phone, Shirt, Truck } from 'lucide-react';
+import { ArrowDown, ArrowRight, Check, Clock3, MapPin, Phone, Shirt, Truck } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import Seo from '@/components/Seo';
-import CTASection from '@/components/CTASection';
 import PricingPlans from '@/components/PricingPlans';
-import PricingComparison from '@/components/PricingComparison';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { BENEFITS, STEPS, SERVICES, FAQS, IMAGES, MARQUEE_WORDS, PHONE_TEL } from '@/lib/siteData';
+import { IMAGES, PHONE, PHONE_TEL } from '@/lib/siteData';
 
 function HomePage() {
     return (
         <>
             <Helmet>
-                <title>Student Laundry in State College | Pickup &amp; Delivery</title>
+                <title>State College Student Laundry | Pickup, Wash, Dry, Fold &amp; Delivery</title>
                 <meta
                     name="description"
-                    content="State College Student Laundry provides student laundry pickup, wash, dry & fold, and delivery in the State College area — serving Penn State students in dorms and off-campus apartments. Schedule a pickup today."
+                    content="Student laundry, done. Scheduled pickup, wash, dry, fold and delivery for students and parents in State College and University Park. Call to sign up."
                 />
             </Helmet>
             <Seo
-                title="Student Laundry in State College | Pickup & Delivery"
-                description="Convenient laundry pickup, wash, dry & fold, and delivery for students in the State College area from State College Student Laundry."
-                image={IMAGES.hero}
+                title="State College Student Laundry | Student Laundry. Done."
+                description="Laundry help for students and parents in State College & University Park. Pickup, wash, dry, fold and delivery."
+                image={IMAGES.students}
                 siteName="StateCollegeStudentLaundry.com"
             />
 
-            {/* Hero */}
-            <section className="relative overflow-hidden bg-gradient-to-b from-secondary/80 via-background to-background">
-                <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-2 lg:pb-24 lg:pt-20">
+            <section className="relative overflow-hidden bg-[#071b3d] text-white">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_35%,rgba(42,112,219,0.28),transparent_52%)]" />
+                <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1fr_0.95fr] lg:py-24">
                     <Reveal>
-                        <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
-                            <Shirt className="h-3.5 w-3.5" />
-                            Student laundry service in State College
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-200">
+                            <MapPin className="h-3.5 w-3.5" />
+                            State College &amp; University Park
                         </span>
-                        <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
-                            Student Laundry Pickup &amp; Delivery in{' '}
-                            <span className="text-primary">State College</span>
+                        <h1 className="mt-6 max-w-2xl font-display text-5xl font-extrabold uppercase leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
+                            Student Laundry.
+                            <span className="mt-2 block text-[#4c91f2]">Done.</span>
                         </h1>
-                        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Spend less time doing laundry and more time focusing on school, work and life. State College
-                            Student Laundry provides convenient laundry pickup, wash, dry, fold and delivery services for
-                            students in the State College area.
+                        <p className="mt-5 text-lg font-semibold text-white/90 sm:text-xl">
+                            Pickup <span className="text-blue-300">•</span> Wash <span className="text-blue-300">•</span>{' '}
+                            Dry <span className="text-blue-300">•</span> Fold <span className="text-blue-300">•</span>{' '}
+                            Delivery
                         </p>
-                        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                            <a
-                                href={`tel:${PHONE_TEL}`}
-                                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                            >
-                                <Phone className="h-4 w-4" /> Call Us
-                            </a>
-                            <Link
-                                to="/how-it-works"
-                                className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-white px-7 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-                            >
-                                How It Works
-                            </Link>
-                        </div>
-                        <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-                            Serving students in eligible State College and surrounding service areas.
+                        <p className="mt-4 max-w-xl text-base leading-relaxed text-blue-100/80 sm:text-lg">
+                            Laundry help for students and parents in State College &amp; University Park.
                         </p>
-                    </Reveal>
-
-                    <Reveal delay={0.15}>
-                        <div className="relative">
-                            <img
-                                src={IMAGES.hero}
-                                alt="Neatly folded clean laundry in a canvas laundry bag"
-                                className="aspect-[3/2] w-full rounded-[2rem] object-cover shadow-2xl shadow-primary/10"
-                                loading="eager"
-                            />
-                            <div className="absolute -bottom-5 -left-3 flex items-center gap-3 rounded-2xl border border-border bg-white px-4 py-3 shadow-xl sm:-left-6">
-                                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-primary">
-                                    <Truck className="h-5 w-5" strokeWidth={1.8} />
-                                </span>
-                                <div>
-                                    <p className="text-sm font-semibold">Pickup &amp; Delivery</p>
-                                    <p className="text-xs text-muted-foreground">Right from your door</p>
-                                </div>
-                            </div>
-                            <div className="absolute -top-5 right-4 flex items-center gap-3 rounded-2xl border border-border bg-white px-4 py-3 shadow-xl">
-                                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-primary">
-                                    <Shirt className="h-5 w-5" strokeWidth={1.8} />
-                                </span>
-                                <div>
-                                    <p className="text-sm font-semibold">Wash, Dry &amp; Fold</p>
-                                    <p className="text-xs text-muted-foreground">Neatly finished</p>
-                                </div>
-                            </div>
-                        </div>
-                    </Reveal>
-                </div>
-
-                {/* Marquee strip */}
-                <div className="border-y border-border bg-primary py-3" aria-hidden="true">
-                    <div className="flex overflow-hidden">
-                        <div className="animate-marquee flex shrink-0 items-center gap-8 pr-8">
-                            {[...MARQUEE_WORDS, ...MARQUEE_WORDS, ...MARQUEE_WORDS, ...MARQUEE_WORDS].map((word, i) => (
-                                <span
-                                    key={i}
-                                    className="flex items-center gap-8 whitespace-nowrap font-display text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground/90"
-                                >
-                                    {word}
-                                    <span className="h-1.5 w-1.5 rounded-full bg-primary-foreground/50" />
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Students Choose Us */}
-            <section className="px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto max-w-6xl">
-                    <Reveal className="mx-auto max-w-2xl text-center">
-                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Why Students Choose Us
-                        </h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            A laundry service built around real student life in State College — simple, reliable, and
-                            designed to give you your time back.
-                        </p>
-                    </Reveal>
-                    <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                        {BENEFITS.map((benefit, i) => (
-                            <Reveal key={benefit.title} delay={i * 0.06}>
-                                <div className="h-full rounded-3xl border border-border bg-card p-6 transition-shadow hover:shadow-lg hover:shadow-primary/5">
-                                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-primary">
-                                        <benefit.icon className="h-5 w-5" strokeWidth={1.8} />
-                                    </span>
-                                    <h3 className="mt-4 font-display text-lg font-semibold">{benefit.title}</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{benefit.text}</p>
-                                </div>
-                            </Reveal>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* How It Works */}
-            <section className="bg-secondary/50 px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto max-w-6xl">
-                    <Reveal className="mx-auto max-w-2xl text-center">
-                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">How It Works</h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Four simple steps between you and a closet full of clean, folded laundry.
-                        </p>
-                    </Reveal>
-                    <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                        {STEPS.map((step, i) => (
-                            <Reveal key={step.title} delay={i * 0.08}>
-                                <div className="relative h-full rounded-3xl border border-border bg-white p-6">
-                                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-base font-bold text-primary-foreground">
-                                        {i + 1}
-                                    </span>
-                                    <h3 className="mt-4 font-display text-lg font-semibold">{step.title}</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
-                                </div>
-                            </Reveal>
-                        ))}
-                    </div>
-                    <Reveal className="mt-10 text-center">
                         <a
                             href={`tel:${PHONE_TEL}`}
-                            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                            className="mt-8 inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-[#3478e5] px-8 text-base font-bold text-white shadow-lg shadow-blue-950/30 transition-colors hover:bg-[#4b8af0]"
                         >
-                            <Phone className="h-4 w-4" /> Call Us
+                            <Phone className="h-5 w-5" />
+                            CALL TO SIGN UP
                         </a>
+                        <p className="mt-3 text-sm text-blue-100/70">
+                            <a className="font-semibold text-white underline decoration-blue-400 underline-offset-4" href={`tel:${PHONE_TEL}`}>
+                                {PHONE}
+                            </a>
+                        </p>
+                    </Reveal>
+
+                    <Reveal delay={0.12} className="relative">
+                        <img
+                            src={IMAGES.students}
+                            alt="Students carrying State College Student Laundry bags"
+                            className="aspect-[4/3] w-full rounded-[1.75rem] border border-white/15 object-cover shadow-2xl shadow-black/30"
+                            loading="eager"
+                        />
+                        <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-xl sm:left-8">
+                            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-[#2467c5]">
+                                <Truck className="h-5 w-5" />
+                            </span>
+                            <span>
+                                <span className="block text-sm font-bold">Clean laundry, back to you</span>
+                                <span className="block text-xs text-slate-500">A simple student routine</span>
+                            </span>
+                        </div>
                     </Reveal>
                 </div>
-            </section>
-
-            {/* Services */}
-            <section className="px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto max-w-6xl">
-                    <Reveal className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-                        <div className="max-w-2xl">
-                            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                                Student Laundry Services
-                            </h2>
-                            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                                From dorm rooms to off-campus apartments — pickup, wash, dry &amp; fold, and delivery
-                                options for student life.
-                            </p>
-                        </div>
-                        <Link
-                            to="/services"
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-                        >
-                            View all services <ArrowRight className="h-4 w-4" />
-                        </Link>
-                    </Reveal>
-                    <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                        {SERVICES.map((service, i) => (
-                            <Reveal key={service.title} delay={i * 0.06}>
-                                <div className="h-full rounded-3xl border border-border bg-card p-6 transition-shadow hover:shadow-lg hover:shadow-primary/5">
-                                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-primary">
-                                        <service.icon className="h-5 w-5" strokeWidth={1.8} />
-                                    </span>
-                                    <h3 className="mt-4 font-display text-lg font-semibold">{service.title}</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.text}</p>
-                                </div>
-                            </Reveal>
+                <div className="relative border-t border-white/15 bg-white/[0.06]">
+                    <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 text-sm font-semibold text-blue-50 sm:px-6 md:grid-cols-4">
+                        {[
+                            [Truck, 'Scheduled pickup'],
+                            [Shirt, 'Wash • dry • fold'],
+                            [ArrowRight, 'Delivery included'],
+                            [Clock3, 'Same-day option'],
+                        ].map(([Icon, label]) => (
+                            <div key={label} className="flex items-center justify-center gap-2">
+                                <Icon className="h-4 w-4 text-blue-300" />
+                                {label}
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Pricing & Plans */}
-            <section className="bg-secondary/50 px-4 py-16 sm:px-6 sm:py-24">
+            <section className="bg-white px-4 py-16 sm:px-6 sm:py-20" id="plans">
                 <div className="mx-auto max-w-6xl">
                     <Reveal className="mx-auto max-w-2xl text-center">
-                        <span className="inline-flex items-center rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
-                            Pricing &amp; Plans
-                        </span>
-                        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Simple, Transparent Per-Pound Pricing
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#3478e5]">Easy options</span>
+                        <h2 className="mt-3 font-display text-3xl font-extrabold uppercase tracking-tight text-[#0b2147] sm:text-4xl">
+                            Choose Your Laundry Plan
                         </h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Three tiers built around student life — pay less per pound the more you commit. Every plan
-                            includes pickup, wash, dry, fold, and delivery.
+                        <p className="mt-3 text-base text-slate-600 sm:text-lg">
+                            Simple plans. Convenient pickup and delivery.
                         </p>
                     </Reveal>
-                    <div className="mt-12">
-                        <PricingPlans />
+                    <div className="mt-10">
+                        <PricingPlans showNote={false} />
                     </div>
-                    <Reveal className="mt-12 text-center">
-                        <Link
-                            to="/services"
-                            className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-border bg-white px-7 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-                        >
-                            View Pricing &amp; Plans <ArrowRight className="h-4 w-4" />
-                        </Link>
+                    <Reveal className="mt-5 flex flex-col items-center gap-1 text-center text-sm text-slate-500">
+                        <span className="font-semibold text-[#163668]">Blankets, Comforters &amp; More</span>
+                        <span>Affordable bedding care. Call for your price and schedule a pickup.</span>
                     </Reveal>
                 </div>
             </section>
 
-            {/* How State College Student Laundry Compares */}
-            <section className="px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto max-w-6xl">
-                    <Reveal className="mx-auto max-w-2xl text-center">
-                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            How We Compare in Central PA
-                        </h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Our pickup &amp; delivery service is priced competitively against regional drop-off
-                            cleaners and national laundry apps — and we come to you.
-                        </p>
+            <section className="bg-[#f1f6fd] px-4 py-14 sm:px-6 sm:py-16">
+                <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+                    <Reveal>
+                        <div className="h-full rounded-2xl border border-blue-100 bg-white p-7 shadow-sm sm:p-9">
+                            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-[#2467c5]">
+                                <Truck className="h-6 w-6" />
+                            </span>
+                            <h2 className="mt-5 font-display text-2xl font-extrabold text-[#0b2147]">
+                                Scheduled Pickups: Monday &amp; Thursday
+                            </h2>
+                            <p className="mt-3 leading-relaxed text-slate-600">
+                                Two scheduled drop-off days each week. Shared routes help keep your costs down.
+                            </p>
+                            <a
+                                href={`tel:${PHONE_TEL}`}
+                                className="mt-5 inline-flex items-center gap-2 font-bold text-[#2467c5] hover:underline"
+                            >
+                                Call to choose a route <ArrowRight className="h-4 w-4" />
+                            </a>
+                        </div>
                     </Reveal>
-                    <div className="mt-12">
-                        <PricingComparison />
-                    </div>
+                    <Reveal delay={0.08}>
+                        <div className="flex h-full flex-col justify-between rounded-2xl bg-[#0b2147] p-7 text-white shadow-lg sm:p-9">
+                            <div>
+                                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-blue-200">
+                                    <Clock3 className="h-6 w-6" />
+                                </span>
+                                <h2 className="mt-5 font-display text-2xl font-extrabold">
+                                    Need It Back Today?
+                                </h2>
+                                <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-blue-200">
+                                    Same-Day Service — $35 Flat Rate
+                                </p>
+                                <p className="mt-3 leading-relaxed text-blue-50/80">
+                                    Call to confirm availability and book.
+                                </p>
+                            </div>
+                            <a
+                                href={`tel:${PHONE_TEL}`}
+                                className="mt-6 inline-flex h-12 items-center justify-center gap-2 self-start rounded-xl bg-[#3478e5] px-6 text-sm font-bold text-white transition-colors hover:bg-[#4b8af0]"
+                            >
+                                <Phone className="h-4 w-4" /> CALL TO BOOK
+                            </a>
+                        </div>
+                    </Reveal>
                 </div>
             </section>
 
-            {/* For Penn State Students */}
-            <section className="bg-secondary/50 px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+            <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
+                <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
                     <Reveal>
                         <img
-                            src={IMAGES.dorm}
-                            alt="College dorm room with a laundry bag ready for pickup"
-                            className="aspect-[3/2] w-full rounded-[2rem] object-cover shadow-xl shadow-primary/10"
+                            src={IMAGES.hero}
+                            alt="A bag of freshly washed and folded laundry"
+                            className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
                             loading="lazy"
                         />
                     </Reveal>
-                    <Reveal delay={0.1}>
-                        <span className="inline-flex items-center rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
-                            Serving Penn State students
+                    <Reveal delay={0.08}>
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#3478e5]">
+                            Simple from start to finish
                         </span>
-                        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Laundry Made Easier for Students in State College
+                        <h2 className="mt-3 font-display text-3xl font-extrabold text-[#0b2147] sm:text-4xl">
+                            One Call Gets You Started
                         </h2>
-                        <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                            State College Student Laundry is a student laundry service designed to take laundry
-                            off your plate — whether you live in a dorm or an off-campus apartment. We are an
-                            independent local service, not affiliated with the university, and we focus on making
-                            laundry one less thing to worry about during the semester.
+                        <p className="mt-4 max-w-xl leading-relaxed text-slate-600">
+                            Choose your service, confirm your price and schedule your pickup. We handle the washing,
+                            drying, folding and return.
                         </p>
-                        <ul className="mt-6 space-y-3">
-                            {[
-                                'Dorm laundry pickup where pickup arrangements are supported',
-                                'Convenient pickup for off-campus apartments and student housing',
-                                'Service-area eligibility confirmed before your first pickup',
-                            ].map((item) => (
-                                <li key={item} className="flex items-start gap-3 text-sm leading-relaxed">
-                                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                                    <span>{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        <Link
-                            to="/student-laundry"
-                            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-                        >
-                            More for students <ArrowRight className="h-4 w-4" />
-                        </Link>
-                    </Reveal>
-                </div>
-            </section>
-
-            {/* For Parents */}
-            <section className="px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-                    <Reveal className="order-2 lg:order-1">
-                        <span className="inline-flex items-center rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
-                            For parents
-                        </span>
-                        <h2 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Help Your Student Stay on Top of Laundry
-                        </h2>
-                        <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-                            Between classes, studying, work, and activities, laundry is often the first chore to slip.
-                            Parents can help students stay on top of it by setting them up with convenient laundry
-                            pickup and delivery — wash, dry &amp; fold handled, clean clothes returned.
-                        </p>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                            Reach out with your student&apos;s State College location and we will confirm service-area
-                            eligibility and the pickup arrangements that work for their dorm or apartment.
-                        </p>
-                        <Link
-                            to="/for-parents"
-                            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-                        >
-                            More for parents <ArrowRight className="h-4 w-4" />
-                        </Link>
-                    </Reveal>
-                    <Reveal delay={0.1} className="order-1 lg:order-2">
-                        <img
-                            src={IMAGES.parents}
-                            alt="Basket of freshly folded laundry on a bed"
-                            className="aspect-[3/2] w-full rounded-[2rem] object-cover shadow-xl shadow-primary/10"
-                            loading="lazy"
-                        />
-                    </Reveal>
-                </div>
-            </section>
-
-            {/* Service Area */}
-            <section className="px-4 pb-16 sm:px-6 sm:pb-24">
-                <Reveal>
-                    <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 rounded-[2rem] border border-border bg-card p-8 sm:p-10 md:flex-row md:items-center">
-                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
-                            <MapPin className="h-7 w-7" strokeWidth={1.8} />
-                        </span>
-                        <div className="flex-1">
-                            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
-                                Service Area &amp; Eligibility
-                            </h2>
-                            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                                We serve students in eligible State College and surrounding service areas. Pickup
-                                arrangements and availability vary by location and building, so please confirm your
-                                address with us before counting on a pickup.
-                            </p>
+                        <div className="mt-6 space-y-3">
+                            {['Choose the service you need', 'Confirm your price and pickup schedule', 'We wash, dry, fold and return your laundry'].map(
+                                (item) => (
+                                    <p key={item} className="flex items-start gap-3 text-sm font-medium text-slate-700">
+                                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#3478e5]" />
+                                        {item}
+                                    </p>
+                                ),
+                            )}
                         </div>
-                        <Link
-                            to="/service-area"
-                            className="inline-flex h-12 shrink-0 items-center justify-center rounded-full border border-border bg-white px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                        <a
+                            href={`tel:${PHONE_TEL}`}
+                            className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#3478e5] px-7 text-sm font-bold text-white transition-colors hover:bg-[#2565c9]"
                         >
-                            Check Your Area
-                        </Link>
-                    </div>
+                            <Phone className="h-4 w-4" /> CALL TO SIGN UP
+                        </a>
+                    </Reveal>
+                </div>
+            </section>
+
+            <section className="bg-[#edf4fd] px-4 py-12 sm:px-6 sm:py-14">
+                <div className="mx-auto flex max-w-5xl flex-col items-center gap-5 rounded-2xl border border-blue-100 bg-white p-7 text-center shadow-sm sm:p-9">
+                    <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#3478e5]">For parents</span>
+                    <h2 className="font-display text-2xl font-extrabold text-[#0b2147] sm:text-3xl">
+                        Parents: Call to Set Up Your Student’s Service
+                    </h2>
+                    <p className="max-w-2xl leading-relaxed text-slate-600">
+                        Give your student one less thing to worry about. Call to discuss a plan and pickup for their
+                        State College or University Park location.
+                    </p>
+                    <a
+                        href={`tel:${PHONE_TEL}`}
+                        className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#0b2147] px-7 text-sm font-bold text-white transition-colors hover:bg-[#163668]"
+                    >
+                        <Phone className="h-4 w-4" /> CALL TO SIGN UP
+                    </a>
+                </div>
+            </section>
+
+            <section className="bg-[#071b3d] px-4 py-14 text-white sm:px-6">
+                <Reveal className="mx-auto max-w-3xl text-center">
+                    <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
+                        Need something else?
+                    </h2>
+                    <p className="mt-3 text-blue-100/80">
+                        Call to learn about our other services.
+                    </p>
+                    <a
+                        href={`tel:${PHONE_TEL}`}
+                        className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white px-7 text-sm font-bold text-[#0b2147] transition-colors hover:bg-blue-50"
+                    >
+                        <Phone className="h-4 w-4" /> CALL {PHONE}
+                    </a>
+                    <a href="#plans" className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-blue-200 hover:text-white">
+                        Back to plans <ArrowDown className="h-4 w-4 rotate-180" />
+                    </a>
                 </Reveal>
             </section>
-
-            {/* FAQ */}
-            <section className="bg-secondary/50 px-4 py-16 sm:px-6 sm:py-24">
-                <div className="mx-auto max-w-3xl">
-                    <Reveal className="text-center">
-                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Frequently Asked Questions
-                        </h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Quick answers about pickup, wash dry &amp; fold, plans, and eligibility.
-                        </p>
-                    </Reveal>
-                    <Reveal delay={0.1}>
-                        <Accordion type="single" collapsible className="mt-10 space-y-3">
-                            {FAQS.slice(0, 6).map((faq, i) => (
-                                <AccordionItem
-                                    key={faq.q}
-                                    value={`faq-${i}`}
-                                    className="rounded-2xl border border-border bg-white px-5"
-                                >
-                                    <AccordionTrigger className="py-5 text-left font-display text-base font-semibold hover:no-underline">
-                                        {faq.q}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">
-                                        {faq.a}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
-                    </Reveal>
-                    <Reveal className="mt-8 text-center">
-                        <Link
-                            to="/faq"
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-4 hover:underline"
-                        >
-                            See all FAQs <ArrowRight className="h-4 w-4" />
-                        </Link>
-                    </Reveal>
-                </div>
-            </section>
-
-            <section className="px-4 py-16 sm:px-6 sm:py-20">
-                <div className="mx-auto max-w-4xl">
-                    <Reveal>
-                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            A Practical Guide to Student Laundry Pickup
-                        </h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                            A full week of lectures, labs, work shifts, practices, and study time can make it difficult
-                            to find a free block for laundry. A pickup and delivery service can help by moving the
-                            washing and folding off your to-do list. Instead of planning a trip around shared machines
-                            or a laundromat, ask about an available pickup, then use the time for studying, meals, rest,
-                            or other parts of campus life. Service is available only when your location and pickup
-                            arrangements can be confirmed.
-                        </p>
-                    </Reveal>
-                    <div className="mt-8 grid gap-8 sm:grid-cols-2">
-                        <Reveal>
-                            <h3 className="font-display text-xl font-semibold">What to include in a request</h3>
-                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                                Include your name and preferred way to be contacted, your State College address or
-                                building, whether you live in a dorm or an apartment, and the days or times that
-                                generally fit your schedule. If your building has a designated entrance or a particular
-                                handoff procedure, mention that too. You can also ask about available plans, current
-                                pricing, laundry preparation, and return delivery. We will review the details and
-                                confirm what is available before treating a pickup as scheduled.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.06}>
-                            <h3 className="font-display text-xl font-semibold">Choosing a laundry plan</h3>
-                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                                Students have different laundry needs. One person may want help occasionally during
-                                exams or a busy stretch of the semester, while another may prefer to ask about a
-                                recurring schedule. Review the available options on the services and pricing page and
-                                consider how often you typically need wash, dry, and fold service. Ask about current
-                                per-pound rates, any minimums or plan conditions, payment details, and scheduling before
-                                deciding. Plan availability and terms should be confirmed directly.
-                            </p>
-                        </Reveal>
-                        <Reveal>
-                            <h3 className="font-display text-xl font-semibold">Information for parents</h3>
-                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                                Parents and other supporters can help a student start a conversation about availability,
-                                pricing, and pickup arrangements. The student’s residence and schedule matter, so share
-                                the correct location and involve the student in confirming where and when laundry can
-                                be collected and returned. Residence hall policies, apartment access, and individual
-                                schedules can affect the details. We can explain the available options and confirm
-                                whether a particular dorm or apartment can be served before a plan is made.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.06}>
-                            <h3 className="font-display text-xl font-semibold">Where we serve</h3>
-                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                                The service is focused on students in State College and nearby areas where a pickup
-                                route and handoff can be arranged. Being in the region does not automatically mean
-                                every address or building is covered. Distance, access, building procedures, and
-                                current availability can all affect eligibility. Check the service area information,
-                                then send your precise location for confirmation. The service is independent and is not
-                                affiliated with or endorsed by Penn State University.
-                            </p>
-                        </Reveal>
-                    </div>
-                </div>
-            </section>
-
-            <section className="px-4 pb-8 sm:px-6" aria-labelledby="share-page-heading">
-                <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
-                    <h2 id="share-page-heading" className="font-display text-sm font-semibold">
-                        Share this page
-                    </h2>
-                    <div className="flex flex-wrap gap-4 text-sm">
-                        <a
-                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstatecollegestudentlaundry.com%2F"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="font-medium text-primary underline-offset-4 hover:underline"
-                        >
-                            Facebook
-                        </a>
-                        <a
-                            href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstatecollegestudentlaundry.com%2F"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="font-medium text-primary underline-offset-4 hover:underline"
-                        >
-                            X
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fstatecollegestudentlaundry.com%2F"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="font-medium text-primary underline-offset-4 hover:underline"
-                        >
-                            LinkedIn
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <CTASection primaryAction="call" />
         </>
     );
 }

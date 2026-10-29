@@ -7,7 +7,6 @@ import Seo from '@/components/Seo';
 import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
 import PricingPlans from '@/components/PricingPlans';
-import PricingComparison from '@/components/PricingComparison';
 import { SERVICES, IMAGES, PRICING_NOTE } from '@/lib/siteData';
 
 function ServicesPage() {
@@ -17,12 +16,12 @@ function ServicesPage() {
                 <title>Student Laundry Services & Pricing in State College | Wash Dry Fold, Dorm & Apartment Pickup</title>
                 <meta
                     name="description"
-                    content="Transparent per-pound pricing for student laundry in State College — wash dry fold, dorm and apartment pickup, and recurring or semester plans. Standard $1.95/lb, Recurring $1.75/lb, Semester $1.65/lb, all with pickup and delivery included."
+                    content="Laundry plans for State College students: 10 lb weekly for $70/month, 20 lb monthly for $80/month, or one-time scheduled-route pickup from $15. Call to sign up."
                 />
             </Helmet>
             <Seo
                 title="Student Laundry Services & Pricing in State College"
-                description="Transparent per-pound pricing for dorm and apartment laundry pickup, wash dry & fold, and recurring or semester plans — pickup and delivery included."
+                description="Weekly and monthly laundry plans, one-time scheduled pickups, same-day service, and bedding care. Call to confirm your price and schedule."
                 image={IMAGES.facility}
                 siteName="StateCollegeStudentLaundry.com"
             />
@@ -30,7 +29,7 @@ function ServicesPage() {
             <PageHero
                 eyebrow="Services & Pricing"
                 title="Laundry Services Built for Student Life"
-                description="Pickup, wash, dry & fold, and delivery for dorms, apartments, and student housing in eligible State College and surrounding service areas — with transparent per-pound pricing."
+                description="Pickup, wash, dry, fold and delivery for students and parents in State College and University Park."
             />
 
             {/* Pricing tiers */}
@@ -41,8 +40,7 @@ function ServicesPage() {
                             Pricing &amp; Plans
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Three simple tiers — pay less per pound the more you commit. Every plan includes pickup,
-                            wash, dry, fold, and delivery.
+                            Choose a weekly plan, monthly plan, or one-time pickup on a scheduled route.
                         </p>
                     </Reveal>
                     <div className="mt-12">
@@ -51,15 +49,14 @@ function ServicesPage() {
                 </div>
             </section>
 
-            {/* Per-service pricing */}
             <section className="bg-secondary/50 px-4 py-16 sm:px-6 sm:py-20">
                 <div className="mx-auto max-w-6xl">
                     <Reveal className="mx-auto max-w-2xl text-center">
                         <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            Services &amp; Per-Pound Rates
+                            Laundry Services
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            The same competitive rate applies whether you live in a dorm or an off-campus apartment.
+                            Call to confirm service availability, your price, and a pickup schedule.
                         </p>
                     </Reveal>
                     <div className="mt-12 space-y-6">
@@ -102,27 +99,10 @@ function ServicesPage() {
                 </div>
             </section>
 
-            {/* Comparison */}
-            <section className="px-4 py-16 sm:px-6 sm:py-20">
-                <div className="mx-auto max-w-6xl">
-                    <Reveal className="mx-auto max-w-2xl text-center">
-                        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                            How We Compare in Central PA
-                        </h2>
-                        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Our pickup &amp; delivery service is priced competitively against regional drop-off
-                            cleaners and national laundry apps — and we come to you.
-                        </p>
-                    </Reveal>
-                    <div className="mt-12">
-                        <PricingComparison />
-                    </div>
-                </div>
-            </section>
-
             <CTASection
-                title="Get Started with Pricing"
-                subtitle="Pick the tier that fits your semester and send a scheduling request — we will confirm eligibility, pickup arrangements, and your per-pound rate."
+                title="One Call Gets You Started"
+                subtitle="Choose your service, confirm your price and schedule your pickup. We handle the washing, drying, folding and return."
+                primaryAction="call"
             />
         </>
     );

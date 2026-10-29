@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, Phone } from 'lucide-react';
+import { CalendarDays, Gift, MapPin, Menu, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { IMAGES, PHONE, PHONE_TEL } from '@/lib/siteData';
 
 const NAV = [
-    { to: '/student-laundry', label: 'Plans' },
+    { to: '/#plans', label: 'Plans' },
+    { to: '/how-it-works', label: 'How It Works' },
     { to: '/parents', label: 'Parents' },
-    { to: '/penn-state', label: 'Penn State' },
-    { to: '/pricing', label: 'Pricing' },
+    { to: '/services', label: 'Services' },
+    { to: '/college-laundry-routes', label: 'Routes' },
     { to: '/faq', label: 'FAQ' },
 ];
 
@@ -19,6 +20,19 @@ function SiteHeader() {
 
     return (
         <header className="sticky top-0 z-40 border-b border-border/70 bg-white/90 backdrop-blur-md">
+            <div className="bg-[#071b3d] text-white">
+                <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-1 px-4 py-2 text-center text-[10px] font-semibold uppercase tracking-wide text-blue-100 sm:grid-cols-3 sm:px-6 sm:text-[11px]">
+                    <span className="flex items-center justify-center gap-1.5">
+                        <CalendarDays className="h-3.5 w-3.5 text-blue-300" /> Monday &amp; Thursday pickup routes
+                    </span>
+                    <span className="hidden items-center justify-center gap-1.5 sm:flex">
+                        <Gift className="h-3.5 w-3.5 text-blue-300" /> Weekly &amp; monthly plans available
+                    </span>
+                    <span className="hidden items-center justify-center gap-1.5 sm:flex">
+                        <MapPin className="h-3.5 w-3.5 text-blue-300" /> Serving State College &amp; University Park
+                    </span>
+                </div>
+            </div>
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
                 <Link to="/" className="flex items-center gap-2.5" aria-label="State College Student Laundry — home">
                     <img
@@ -61,8 +75,8 @@ function SiteHeader() {
                         <Phone className="h-4 w-4" strokeWidth={1.8} />
                         {PHONE}
                     </a>
-                    <Button asChild className="hidden rounded-full px-5 sm:inline-flex">
-                        <Link to="/book">Start My Plan</Link>
+                    <Button asChild className="hidden rounded-lg bg-[#0b2147] px-5 hover:bg-[#163668] sm:inline-flex">
+                        <a href={`tel:${PHONE_TEL}`}>Call to Sign Up</a>
                     </Button>
                     <Sheet open={open} onOpenChange={setOpen}>
                         <SheetTrigger asChild>
@@ -91,9 +105,9 @@ function SiteHeader() {
                                     Call or Text {PHONE}
                                 </a>
                                 <Button asChild className="mt-4 h-12 rounded-xl text-base">
-                                    <Link to="/contact" onClick={() => setOpen(false)}>
-                                        Start My Plan
-                                    </Link>
+                                    <a href={`tel:${PHONE_TEL}`} onClick={() => setOpen(false)}>
+                                        Call to Sign Up
+                                    </a>
                                 </Button>
                             </div>
                         </SheetContent>

@@ -201,8 +201,10 @@ function ContactPage() {
                                             </SelectTrigger>
                                             <SelectContent>
                                                 <SelectItem value="one-time">One-time wash, dry & fold pickup</SelectItem>
-                                                <SelectItem value="recurring">Recurring laundry plan</SelectItem>
-                                                <SelectItem value="semester">Semester laundry plan</SelectItem>
+                                                <SelectItem value="weekly">Weekly plan — 10 lb/week</SelectItem>
+                                                <SelectItem value="monthly">Monthly plan — 20 lb/month</SelectItem>
+                                                <SelectItem value="same-day">Same-day service — $35 flat rate</SelectItem>
+                                                <SelectItem value="bedding">Blankets, comforters, or other laundry</SelectItem>
                                                 <SelectItem value="not-sure">Not sure yet — help me decide</SelectItem>
                                             </SelectContent>
                                         </Select>

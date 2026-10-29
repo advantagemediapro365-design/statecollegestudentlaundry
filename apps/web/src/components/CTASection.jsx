@@ -12,7 +12,7 @@ function CTASection({
     return (
         <section className="px-4 py-16 sm:px-6 sm:py-20">
             <Reveal>
-                <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary via-[hsl(193,85%,26%)] to-[hsl(210,70%,30%)] px-6 py-14 text-center text-primary-foreground sm:px-12 sm:py-16">
+                <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary via-[hsl(216,72%,34%)] to-[hsl(222,75%,20%)] px-6 py-14 text-center text-primary-foreground sm:px-12 sm:py-16">
                     <div
                         className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10"
                         aria-hidden="true"

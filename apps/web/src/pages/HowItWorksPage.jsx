@@ -76,7 +76,7 @@ function HowItWorksPage() {
                                 'Your pickup location or area in State College',
                                 'Whether you are in a dorm, apartment, or other student housing',
                                 'Your preferred pickup timing',
-                                'The laundry service you need — one-time, recurring, or semester-length',
+                                'The laundry service you need — weekly, monthly, or one-time',
                             ].map((item) => (
                                 <li key={item} className="flex items-start gap-3 text-sm leading-relaxed sm:text-base">
                                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -133,8 +133,8 @@ function HowItWorksPage() {
                             What It Costs
                         </h2>
                         <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                            Transparent per-pound pricing — pay less the more you commit. Every plan includes pickup,
-                            wash, dry, fold, and delivery.
+                            Choose 10 lb per week for $70/month, 20 lb per month for $80/month, or one-time pickup on a
+                            scheduled route from $15.
                         </p>
                     </Reveal>
                     <div className="mt-12">
