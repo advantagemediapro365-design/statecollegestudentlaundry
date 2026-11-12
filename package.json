@@ -16,6 +16,6 @@
     "apps/*"
   ],
   "dependencies": {
-    "@wix/cli": "^1.1.242"
+    "@wix/cli": "^1.2.11"
   }
 }
